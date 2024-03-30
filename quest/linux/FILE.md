@@ -28,7 +28,7 @@
 
 先程作成した TMP.md ファイルをコピーして COPY.md ファイルを作成してください。
 >
->copy TMP.md COPY.md
+>cp TMP.md COPY.md
 >
 ## 6. ファイルの削除
 
@@ -45,9 +45,10 @@
 ## 8. ファイルの検索
 
 ホームディレクトリ以下のファイルに対して、README という文字列が含まれるファイルを全て検索し、出力してください。なお、find コマンドを使用して実現することができます。
->
->find ~/ -name '*README*' -print
->
+
+```shell-session
+find ~/ -name '*README*' -print
+```
 ## 9. 検索
 
 ~/sample.txt ファイルを作成し、以下の内容を記載してください。
@@ -61,5 +62,5 @@ lemon
 
 その上で、sample.txt ファイルから、"a" で始まる単語を検索してください。なお、grep コマンドを使用して実現することができます。
 >
->grep 'a*' sample.txt
+>grep '^a' sample.txt
 >
