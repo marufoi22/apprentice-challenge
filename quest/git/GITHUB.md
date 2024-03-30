@@ -32,8 +32,6 @@ GitHub 上に新規リポジトリを作成してください。
 
 README.md に変更を追加してください。そしてその変更を GitHub にプッシュしてください。
 >
->git init
->
 >git add README.md
 >
 >git commit -v
