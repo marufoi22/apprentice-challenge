@@ -26,7 +26,7 @@ GitHub 上に新規リポジトリを作成してください。
 >
 >git remote add develop https://github.com/yukimaensoono/git_develop.git
 >
->git push develop main
+>git push develop master
 >
 ## 3. 追加の変更をプッシュ
 
@@ -38,7 +38,7 @@ README.md に変更を追加してください。そしてその変更を GitHub
 >
 >git commit -v
 >
->git push develop main
+>git push develop master
 >
 ## 4. クローン
 
