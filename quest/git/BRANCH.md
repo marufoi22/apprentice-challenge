@@ -34,8 +34,6 @@ feature ブランチでファイルの変更を行い、コミットしてくだ
 次に、feature ブランチの変更を main ブランチに取り込んでください。なお、他のブランチの変更を取り込むことをマージと言います。
 
 >
->git checkout main
->
 >git merge origin main
 >
 
