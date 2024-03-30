@@ -18,14 +18,23 @@ GitHub にプッシュをしたことのあるローカルリポジトリ（自�
 6. 変更内容を確認し、問題なければ GitHub 上で変更をマージしてください
 7. GitHub 上の pullrequest ブランチを削除してください
 
+>
 >1.git checkout -b pullrequest
+>
 >2.vim PULLREQUEST.md
+>
 >3.git add PULLREQUEST.md
+>
 >  git commit -v
+>
 >4.git push origin pullrequest
+>
 >5.-
+>
 >6.-
+>
 >7.-
+>
 
 ## ３. ローカルへのリポートリポジトリの変更内容の取り込み
 
