@@ -63,4 +63,3 @@ lemon
 >
 >grep 'a*' sample.txt
 >
-
