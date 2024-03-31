@@ -31,7 +31,7 @@ README.md ファイルのパーミッションを確認し、誰に何の権限�
 README.md ファイルのオーナーに対して、読み取り、書き込み、実行の全ての権限を付与してください。
 
 ```shell-session
-chmod u+w README.md
+chmod u+x README.md
 ```
 
 ## 4. ディレクトリのパーミッションの設定
@@ -53,7 +53,7 @@ chmod g+w permission
 スーパーユーザーとして、ホームディレクトリの直下に superuser という名前の空ディレクトリを作成してください。
 
 ```shell-session
-su -
+sudo su -
 mkdir ~/superuser
 ```
 作成後、superuser ディレクトリのオーナーが誰かを確認してください。
