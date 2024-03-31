@@ -12,10 +12,11 @@
 ・Git・GitHubの誕生の背景・目的をWEB講座で学ぶ
 
 # 学習教材のリストアップ
-・Linux
+**Linux** 
 1.入門者のLinux  
 2.新しいLinuxの教科書  
-・Git・GitHub  
+
+**Git・GitHub**  
 1.もう怖くないGit!(Udemy)  
 
 # 学習計画
