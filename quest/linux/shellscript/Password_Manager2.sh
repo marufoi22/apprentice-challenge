@@ -8,6 +8,8 @@ if [ "$input" = "Add Password" ]; then
         read -p "ユーザー名を入力してください:" UserName
         read -p "パスワードを入力してください:" PassWord
         echo "$ServiceName;$UserName;$PassWord" >> PASS.conf
+	gpg -c PASS.conf
+	rm PASS.conf
 elif [ "$input" = "Get Password" ]; then
         read -p "サービス名を入力してください:" ServiceName 
         while IFS=';' read -r -a elements; do
