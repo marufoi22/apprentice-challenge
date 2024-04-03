@@ -4,7 +4,7 @@ echo 'パスワードマネージャーへようこそ!'
 read -p "次の選択肢から入力してください(Add Password/Get Password/Exit):" input
 
 if [ "$input" = "Add Password" ]; then
-	gpg PASS.conf.gpg
+	gpg PASS.conf.gpg 2> /dev/null
         read -p "サービス名を入力してください:" ServiceName
         read -p "ユーザー名を入力してください:" UserName
         read -p "パスワードを入力してください:" PassWord
@@ -12,7 +12,7 @@ if [ "$input" = "Add Password" ]; then
 	gpg -c PASS.conf
 	rm PASS.conf
 elif [ "$input" = "Get Password" ]; then
-	gpg PASS.conf.gpg
+	gpg PASS.conf.gpg 2> /dev/null
         read -p "サービス名を入力してください:" ServiceName 
         while IFS=';' read -r -a elements; do
 		if [ "${elements[0]}" = "$ServiceName" ]; then
