@@ -1,20 +1,22 @@
 #!/bin/bash
+source ./mail_address.conf
+
 echo 'パスワードマネージャーへようこそ!'
 
 read -p "次の選択肢から入力してください(Add Password/Get Password/Exit):" input
 
 if [ "$input" = "Add Password" ]; then
-	gpg PASS.conf.gpg 2> /dev/null
-	rm PASS.conf.gpg
+	gpg PASS.conf.asc 2> /dev/null
+	rm PASS.conf.asc
         read -p "サービス名を入力してください:" ServiceName
         read -p "ユーザー名を入力してください:" UserName
         read -p "パスワードを入力してください:" PassWord
         echo "$ServiceName;$UserName;$PassWord" >> PASS.conf
-	gpg -c PASS.conf
+        gpg -e -a -r "$mail_address" PASS.conf
 	rm PASS.conf
 elif [ "$input" = "Get Password" ]; then
-	gpg PASS.conf.gpg 2> /dev/null
-	rm PASS.conf.gpg
+	gpg PASS.conf.asc 2> /dev/null
+	rm PASS.conf.asc
         read -p "サービス名を入力してください:" ServiceName 
         while IFS=';' read -r -a elements; do
 		if [ "${elements[0]}" = "$ServiceName" ]; then
@@ -31,7 +33,7 @@ elif [ "$input" = "Get Password" ]; then
 	else
 		echo "そのサービスは登録されていません"
 	fi
-	gpg -c PASS.conf
+	gpg -e -a -r "$mail_address" PASS.conf
 	rm PASS.conf
 elif [ "$input" = "Exit" ]; then
 	echo "Thank you!"
