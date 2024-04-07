@@ -14,28 +14,28 @@ if [ "$input" = "Add Password" ]; then
 		touch $passfile
 		echo "$passfileを新規作成しました"
 	fi
-        read -p "サービス名を入力してください:" ServiceName
-        read -p "ユーザー名を入力してください:" UserName
-        read -p "パスワードを入力してください:" PassWord
-        echo "$ServiceName;$UserName;$PassWord" >> $passfile
+        read -p "サービス名を入力してください:" In_ServiceName
+        read -p "ユーザー名を入力してください:" In_UserName
+        read -p "パスワードを入力してください:" In_PassWord
+        echo "$In_ServiceName;$In_UserName;$In_PassWord" >> $passfile
         gpg -e -a -r "$mail_address" $passfile
 	rm $passfile
 elif [ "$input" = "Get Password" ]; then
 	if [ -e $encrypted_passfile ]; then
 		gpg $encrypted_passfile > /dev/null && rm $encrypted_passfile
-        	read -p "サービス名を入力してください:" ServiceName 
+        	read -p "サービス名を入力してください:" In_ServiceName 
         	while IFS=';' read -r -a elements; do
-			if [ "${elements[0]}" = "$ServiceName" ]; then
-	    			ServiceName1="${elements[0]}"
-	    		   	UserName1="${elements[1]}"
-	    		   	PassWord1="${elements[2]}"
+			if [ "${elements[0]}" = "$In_ServiceName" ]; then
+	    			Out_ServiceName="${elements[0]}"
+	    		   	Out_UserName="${elements[1]}"
+	    		   	Out_PassWord="${elements[2]}"
 			fi
 		done < $passfile
 
-        	if [ -n "$ServiceName1" ]; then 
-			echo "$ServiceName1"
-			echo "$UserName1"
-        		echo "$PassWord1"
+        	if [ -n "$Out_ServiceName" ]; then 
+			echo "$Out_ServiceName"
+			echo "$Out_UserName"
+        		echo "$Out_PassWord"
 		else
 			echo "そのサービスは登録されていません"
 		fi
