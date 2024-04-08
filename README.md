@@ -1,45 +1,25 @@
 # アプレンティス Web テスト
 
-こちらの Web テストでは、アプレンティスの学習を模擬体験していただきます。
+## 提出課題
 
-## 選考内容
+ 提出QUESTになります。ご確認お願いします。
+ [パスワードマネージャー](quest/submit/password_manager.sh)
 
-アプレンティスのカリキュラムの一部を体験していただきます。課題は大きく2つあります。
+## 学習内容
+
+課題2つに取り組む。  
+リポジトリは、[apprentice-challenge](https://github.com/APPRENTICE-jp/apprentice-challenge.git)を複製。
 
 1. Linux/Git,GitHub
 2. なぜエンジニアになりたいのかの論述
 
-必要なスキルをまとめたものとして [Skill Doc](skilldoc) が用意されています。Skill Doc の内容を理解することで、エンジニアとして必要なスキルが「わかった」状態になります。
-
-Skill Doc の内容を身につけるためにある課題が [QUEST](quest) です。QUEST で演習を行い、「わかった」を「できる」にします。QUEST を自力で解くのが何よりも重要です。自力でできるようになるまで、何度も繰り返し解きましょう。
-
-最終的には提出 QUEST を提出いただきます。
-
-※ [推薦教材](RESOURCES.md)も参考に進めてください
-
-## 期間
-
-2週間
-
-## 提出方法
-
-メールに記載の応募フォームより提出ください。
-
-## 注意事項
-
-- mainブランチには直接プッシュしないでください
-- 内容を修正したい場合は別途ブランチを切り、修正したいブランチに対してプルリクエストを作成してください
-- プルリクエストのマージは運営が行うため、マージは行わないでください
-
-## 選考課題
-
 ### 1. Linux/Git,GitHub
 
-1. Skill Doc を読む
+1. Skill Docs の課題を記載してpush
    1. [ゴールから逆算して学ぶことができる](/skilldoc/GOAL.md)
    2. [Linux](/skilldoc/LINUX.md)
    3. [Git](/skilldoc/GIT.md)
-2. QUEST を解く
+2. QUEST を解いてpush
    1. [ゴールから逆算して学ぶことができる](/quest/curiosity/GOAL.md)
    2. [[linux][Level1] Linux が何かを説明できる](/quest/linux/LINUX.md)
    3. [[linux][Level1] Linux の環境を用意することができる](/quest/linux/ENVIRONMENT.md)
@@ -58,11 +38,11 @@ Skill Doc の内容を身につけるためにある課題が [QUEST](quest) で
    16. [[Git][Level2] GitHub フローに従って開発を進めることができる](/quest/git/PULLREQUEST.md)
 3. 提出 QUEST を提出する
    1. [パスワードマネージャー](/quest/linux/PASSWORD_MANAGER.md)
-   2. 上記のコードを GitHub 上にアップして提出する。その際に、GitHub フローに従ってプルリクエストを作成し進めること
+   2. 上記のコードを GitHub 上にアップして提出。その際に、GitHub フローに従ってプルリクエストを作成し進める。
 
 ### 2. なぜエンジニアになりたいのかの論述
 
 1. Skill Doc を読む
    1. [読みやすいドキュメントを書ける](/skilldoc/DOCUMENTATION.md)
-2. 提出 QUEST を提出する
+2. 提出 QUEST を提出
    1. [なぜエンジニアか？](/quest/career/WHY_ENGINEER.md)
