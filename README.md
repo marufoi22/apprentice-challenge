@@ -2,7 +2,7 @@
 
 ## 提出課題
 
- 提出QUESTになります。ご確認お願いします。
+以下、 提出QUESTになります。ご確認お願いします。  
  [パスワードマネージャー](quest/submit/password_manager.sh)
 
 ## 学習内容
