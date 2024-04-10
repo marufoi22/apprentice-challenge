@@ -7,6 +7,7 @@ echo 'パスワードマネージャーへようこそ!'
 
 read -p "次の選択肢から入力してください(Add Password/Get Password/Exit):" input
 
+# Add Passwordが入力された場合
 if [ "$input" = "Add Password" ]; then
 	if   [ -e $encrypted_passfile ]; then
         	gpg $encrypted_passfile > /dev/null && rm $encrypted_passfile
@@ -20,6 +21,7 @@ if [ "$input" = "Add Password" ]; then
         echo "$In_ServiceName;$In_UserName;$In_PassWord" >> $passfile
         gpg -e -a -r "$mail_address" $passfile
 	rm $passfile
+# Get Passwordが入力された場合
 elif [ "$input" = "Get Password" ]; then
 	if [ -e $encrypted_passfile ]; then
 		gpg $encrypted_passfile > /dev/null && rm $encrypted_passfile
@@ -44,8 +46,10 @@ elif [ "$input" = "Get Password" ]; then
 	else
 	        echo "$passfileがありません"
 	fi
+# Exitが入力された場合
 elif [ "$input" = "Exit" ]; then
 	echo "Thank you!"
+# Add Password/Get Password/Exit 以外が入力された場合
 else
 	echo "入力が間違えています。Add Password/Get Password/Exit から入力してください。"
 fi
